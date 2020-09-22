@@ -52,7 +52,7 @@ test('There is no I in team', ()=>{
 })  
 
 test('Admin should be in username', ()=>{
-    usernames = ['john', 'tim', 'admin']
+    const usernames = ['john', 'tim', 'admin']
     expect(usernames).toContain('admin')
 })
 
@@ -64,9 +64,3 @@ test('User fetched name should be Leanne Graham', ()=>{
         })
 })
 
-test('User fetched name should be Leanne Graham', async()=>{
-    expect.assertions(1)
-    const data = await functions.fetchUser()
-    expect(data.name).toEqual('Leanne Graham')
-        
-})
